@@ -1,0 +1,23 @@
+## To install the project:
+
+```
+conda create -n axontask python=3.11
+conda activate axontask
+```
+
+### Install dependencies
+
+```
+pip install -e .
+pip install -q -U google-generativeai
+pip install openmeteo-requests
+pip install requests-cache retry-requests numpy pandas
+```
+
+### Run the project
+
+Stand in the main directory
+
+```
+python src/scripts/main.py
+```

@@ -46,9 +46,9 @@ def data_to_output(data, question):
 
     {question}
 
-    If you can use it to answer the question today is: {current_date}. Do not make the answer as if the user knows the data you extracted, just use it to answer the question.
+    If you can use it to answer the question today is: {current_date}. 
 
-    If the extracted data generated an error, Do not take that into account in the response, and try to respond to the question with you prior knowledge and the date provided above.
+    Structure your answer as if the user does not know anything about the data extracted from the weather api. And try not to mention this but just use it as information to answer the question.
 
     """
     return data_to_output
