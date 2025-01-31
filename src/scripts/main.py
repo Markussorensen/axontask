@@ -9,7 +9,7 @@ from src.lib.weather import get_weather_data, get_weather_info_from_response
 
 def main():
     # Define openai client
-    genai.configure(api_key="AIzaSyBihNbTOiCTWXxQAkh7T1GO-XJwc57SzaA")
+    genai.configure(api_key="")
     model = genai.GenerativeModel("gemini-1.5-flash")
 
     method = "Google"
