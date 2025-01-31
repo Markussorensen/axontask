@@ -1,26 +1,18 @@
 from omegaconf import OmegaConf
-from transformers import pipeline
 import google.generativeai as genai
 import json
 import openmeteo_requests
 import requests_cache
-import pandas as pd
 from retry_requests import retry
 
 from src.lib.queries import userinput_to_data, data_to_output
 from src.lib.weather import get_weather_data, get_weather_info_from_response
 
 def main():
-    # Load config
-    config = OmegaConf.load("config/config.yaml")
-
     # Define openai client
-    # client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-    genai.configure(api_key="AIzaSyBihNbTOiCTWXxQAkh7T1GO-XJwc57SzaA")
+    genai.configure(api_key="your-api-key")
     model = genai.GenerativeModel("gemini-1.5-flash")
 
-    # Define the transformer model pipeline
-    # pipe = pipeline("text-generation", model="dfurman/CalmeRys-78B-Orpo-v0.1")
     method = "Google"
 
     # Meteo weather api
